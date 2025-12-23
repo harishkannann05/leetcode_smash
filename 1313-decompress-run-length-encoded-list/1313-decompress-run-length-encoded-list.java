@@ -8,10 +8,6 @@ class Solution {
                 arr.add(val);
             }
         }
-    int[] array=new int[arr.size()];
-    for(int k=0;k<arr.size();k++){         
-        array[k]=arr.get(k);
-    }
-    return array;
+    return arr.stream().mapToInt(Integer::intValue).toArray();
     }
 }
